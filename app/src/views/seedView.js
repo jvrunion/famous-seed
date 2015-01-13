@@ -1,9 +1,7 @@
 /*globals define*/
 define(function(require, exports, module) {
+    var Engine = require('famous/core/Engine');
     var View = require('famous/core/View');
-    var Surface = require('famous/core/Surface');
-    var Transform = require('famous/core/Transform');
-    var StateModifier = require('famous/modifiers/StateModifier');
 
     /*
      * @name seedView
@@ -12,7 +10,10 @@ define(function(require, exports, module) {
      */
 
     function seedView() {
-        View.apply(this, arguments);
+        // create the main context
+        var seedContext = Engine.createContext();
+
+        seedContext.setPerspective(1000);
     }
 
     seedView.prototype = Object.create(View.prototype);
