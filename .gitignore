@@ -1,6 +1,21 @@
-node_modules/
-test/temp
-test/temp-tutorial/
-test/temp-view
-test/temp-not-empty/
-test/temp-end2end/
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Node Files #
+##############
+node_modules
+
+# Logs #
+########
+*.log
+
+# Project Files #
+#################
+dist
+.tmp
+app/lib
+.yo-rc.json

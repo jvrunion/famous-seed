@@ -1,115 +1,51 @@
-# generator-[famous](http://famo.us) [![Build Status](https://travis-ci.org/FamousTools/generator-famous.svg)](https://travis-ci.org/FamousTools/generator-famous) [![Dependency Status](https://david-dm.org/FamousTools/generator-famous.svg)](https://david-dm.org/FamousTools/generator-famous)
+##Dependencies
+It is actually quite simple really
 
-> Use this [yeoman](http://yeoman.io) generator to seed your next Famo.us project... automation ftw!
+First make sure you have node.js installed... without that nothing works!  You can either install it with your favorite package manager or with [the installer](http://nodejs.org/download) found on [nodejs.org](http://nodejs.org).
 
-
-## Getting Started
-
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![yeoman](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+This project relies on grunt-cli, and bower to do all the heavy lifting for you
 
 ```
-$ npm install -g yo grunt-cli bower
+npm install -g grunt-cli bower
 ```
 
-### How to Install
-
-To install ```generator-famous``` from npm simply run the command
+##Getting Started
 
 ```
-$ npm install -g generator-famous
+npm install && bower install
 ```
 
-Make a directory to put your app into and hop in
+That's it!!!
 
-```
-$ mkdir famousApp   # mkdir makes a new directory
-$ cd famousApp      # cd is short for change directory
-$ yo famous        # Let's call the yeoman to make us famous
-```
+##Running the Development Server
 
-### Features
+Simply run ```grunt serve``` and you will start a local development server and open Chrome.  Watch tasks will be running, and your browser will be automatically refreshed whenever a file in the repo changes.
 
-* Development server with live-reload
-* Real time linting with eslint and jscs
-* Automatically inject bower-installed vendor code into require.js config
-* All the dot files!
-* A single command to prepare your project for production
+You can run serve with ```--port=9001``` to manually pick the port that the server will run on
 
-### Generators
+*This option is currently borked...*
+You can also change the port livereload is running on with the option ```--livereload=8675309```
+*... if you think you can fix it check out the [issue on github](https://github.com/FamousTools/generator-famous/issues/22)*
 
-Available generators:
+If you would like to have your server be accessible to other devices on your local machine use the option ```--hostname=0.0.0.0```
 
-* [famous](#app) (a.k.a. [famous:app](#app))
-* [famous:view](#view)
+If you don't like your browser being opened for use a ```--no-open``` flag to disable the feature
 
-**These generators must be run from the root directory of you project**
+##Production
 
-###App
+If you would like to compile your project for distribution simply run the command ```grunt``` to build ```dist/``` which will be a deployment ready version of your app.  Preprocessing will be applied to html, all js will be concatenated and minified.  All js / css assets will also have their name prepended with a hash for cache busting.
 
-Description:
-    Creates a default Famo.us app
-    
-Example:
-    
-    yo famous
-    
-This will create:
+##Why are styles so strict?
 
-        README.md
-        Gruntfile.js
-        bower.json
-        package.json
-        
-        .bowerrc
-        .editorconfig
-        .eslint.json
-        .jscs.json
-        
-        app/index.html
-        app/src/main.js
-        app/src/requireConfig.js
-        app/src/content/images/famous_symbol_transparent.png
-        app/src/styles/app.css
+While the default style guidelines are fairly strict, we are doing so with reason.  Famo.us is not only a framework for creating cutting edge web application, but a community project that we are all going to contribute to in the hopes of making the web better.  We truly believe that having consistent style within the community will make it easier for individuals to jump between different Famo.us modules without having to waste valuable time on processing style.
 
-###View
+While our Package Manager (which is currently in development) will enforce our style guide if you would like to publish a module, feel free to disable eslint or jscs as you see fit.  If you want to disable linting you will need to comment out lines 18 - 19 in ```grunt/aliases.js```
 
-Description:
-    Creates a new View
-    
-Example:
-    
-    yo famous:view MyView
-    
-This will create: ```app/src/views/MyView.js```
-        
-    yo famous:view Some/Path/OtherView
-    
-This will create: ```app/src/views/Some/Path/OtherView.js```
+## Contributing
+All contributions are welcome! The simplest way to show your support for this project is to **"star" it**.
 
-### Getting To Know Yeoman
+##License
+ISC
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
-###Be Aware of .yo-rc.json
-
-When this generator scaffolds out a project it generates a .yo-rc.json file.  This file allows yo to run again in the same directory without prompting you for information.  This is particularly useful if you want to update your project to be based on the latest version of generator-famous.  This can be a problem though, as yo searches up the file tree to check if there is a version of .yo-rc.json.   So if you for example accidentally ran ```yo famous``` from a directory that was not empty, you might end up leaving the .yo-rc.json in the directory above where you would like to be.  The result will be then when running yo in an empty directory afterwards your files will never end up in the folder you are expecting them to.
-
-PHEW
-
-*TLDR:* If ```yo famous``` is putting things in parent directories check for an orphaned ```.yo-rc.json```
-
-### Shout outs
-
-This generator could not have been made possible without the great work done on [generator-webapp](https://github.com/yeoman/generator-webapp), [generator-angular](https://github.com/yeoman/generator-angular/blob/master/readme.md), and [generator-assemble](https://github.com/assemble/generator-assemble)
-
-## License
-
-MPL V2.0
+## Release History
+ * 2015-01-12   v0.1.0   Generated by the [Yeoman Generator](https://github.com/FamousTools/generator-famous) for [Famo.us](http://famo.us)
