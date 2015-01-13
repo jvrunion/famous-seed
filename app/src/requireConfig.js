@@ -7,6 +7,9 @@ require.config({
         famous: '../lib/famous/src',
         requirejs: '../lib/requirejs/require',
         almond: '../lib/almond/almond'
-    }
+    },
+    packages: [
+
+    ]
 });
 require(['main']);

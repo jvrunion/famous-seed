@@ -1,8 +1,28 @@
 html {
-  background: #fff;
+	background: #fff;
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-weight: 300;
+/*	color: #434F5E;*/
+	line-height: 2.5em;
+} 
+
+.firstSurface {
+	background-color: rgb(202, 202, 202);
+	box-shadow: inset 0 0 50px 20px rgba(160, 160, 160, 0.21);
+	border-radius: 4px;
+	color: #fff;
+	text-align: center
 }
 
 .backfaceVisibility {
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
 }
