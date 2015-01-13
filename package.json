@@ -1,8 +1,8 @@
 {
-  "name": "backbase",
-  "description": "Backbase famous seed project.",
+  "name": "Seed",
+  "description": "Famo.us seed project.",
   "version": "0.1.0",
-  "homepage": "https://github.com/jvrunion/backbase",
+  "homepage": "https://github.com/jvrunion/famous-seed",
   "author": {
     "name": "John Runion",
     "url": "http://github.com/jvrunion/"
@@ -10,10 +10,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jvrunion/backbase.git"
+    "url": "git://github.com/jvrunion/famous-seed.git"
   },
   "bugs": {
-    "url": "https://github.com/jvrunion/backbase/issues"
+    "url": "https://github.com/jvrunion/famous-seed/issues"
   },
   "engines": {
     "node": ">= 0.10.0"

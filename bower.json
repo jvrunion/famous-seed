@@ -1,8 +1,8 @@
 {
-  "name": "backbase",
-  "description": "Backbase famous seed project.",
+  "name": "Seed",
+  "description": "Famo.us seed project.",
   "version": "0.1.0",
-  "homepage": "https://github.com/jvrunion/backbase",
+  "homepage": "https://github.com/jvrunion/famous-seed",
   "authors": [{
     "name": "John Runion",
     "url": "http://github.com/jvrunion/"
