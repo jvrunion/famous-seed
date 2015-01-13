@@ -1,5 +1,7 @@
 #A Famous/Angular Seed
 
+Based on: [Famo.us](https://famo.us/integrations/angular/#/intro)
+
 ##Dependencies
 It is actually quite simple really
 
