@@ -41,8 +41,8 @@ define(function(require, exports, module) {
        classes: ['sideBarSurface'],
        properties: {
             textAlign: 'center',
-            border: '1px solid #000',
-            backgroundColor: '#222',
+            border: '1px solid rgba(0, 0, 0, 0.08)',
+            backgroundColor: 'rgba(34, 34, 34, 0.5)',
             color: '#fff',
             textTransform: 'uppercase'
        }
