@@ -9,7 +9,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   // Load grunt config
-  require('load-grunt-config')(grunt, {
+  require('load-grunt-config','load-grunt-tasks')(grunt, {
     init: true,
     data: {
       config: {
