@@ -1,17 +1,23 @@
 html {
-	background: #fff;
+	background: #9B9B9B;
 	font-family: 'Source Sans Pro', sans-serif;	
 }
 
-.firstSurface {
+.mainSurface {
 	background-color: rgb(202, 202, 202);
 	box-shadow: inset 0 0 50px 20px rgba(160, 160, 160, 0.21);
 }
 
-.firstSurface h3 {
+.mainSurface h3, .sideBarSurface h3, .navSurface h3 {
 	color: #F93608;
+	text-shadow: 1px solid #000;
 }
 
-.sideBarSurface {
+.riser {
+	font-size: 2em;
+	font-weight: 100;
+}
 
+.navSurface h3.riser {
+	text-shadow: 1px solid #000;
 }
