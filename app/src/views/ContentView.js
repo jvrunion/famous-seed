@@ -16,13 +16,12 @@ define(function(require, exports, module) {
     function ContentView() {
         View.apply(this, arguments);
         var mainContext = Engine.createContext();
-
         var surface = new Surface({
-          size: [10, undefined],
+          size: [25, undefined],
           properties: {
             color: 'white',
             textAlign: 'center',
-            backgroundColor: '#FA5C4F'
+            backgroundColor: 'rgb(161, 161, 161)'
           }
         });
 

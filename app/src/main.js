@@ -45,7 +45,7 @@ define(function(require, exports, module) {
     });
 
     var sideBarSurface = new Surface({
-       content: '<div><h3>Sidebar</h3><p>Sidebar Surface!<br>I live inside a sidebar context.</p><p>You can add <b>HTML</b> content to me and style me with <b>CSS!</b></p></div>',
+       content: '<div><h1>Responsive</h1><h2>Sidebar Surface!</h2><p><ul><li>I live inside a sidebar context.</li><li>I am Responsive without @media queries!</li></ul><h1>Heading 1</h2><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5></div>',
        size: [300, undefined],
        classes: ['sideBarSurface'],
        properties: {
@@ -58,7 +58,10 @@ define(function(require, exports, module) {
         textShadow: '1px solid #000',
         paddingLeft: '1em',
         paddingRight: '1em',
-        fontWeight: '100'
+        fontWeight: '100',
+        cursor: 'pointer',
+        padding: '15px 20px 30px',
+        lineHeight: '.98em'
         }
     });
 
@@ -68,13 +71,19 @@ define(function(require, exports, module) {
     });
 
     var centerContextContainer = new Modifier({
-        align: [0.5, 0.5],
+        align: [0.5, .76],
         origin: [0.5, 0.5]
     });
 
     var sideBarSurfaceContainer = new Modifier({
         align: [0, 0.5],
         origin: [0, 0.5]
+    });
+
+    sideBarSurface.on('click', function() {
+      sideBarSurface.setProperties({
+        backgroundColor: 'rgba(0, 0, 0, 0.95)'
+      });
     });
 
     mainContext.add(navContextContainer).add(navSurface);
