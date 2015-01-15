@@ -6,8 +6,9 @@ define(function(require, exports, module) {
     var Modifier = require('famous/core/Modifier');
     var Surface = require('famous/core/Surface');
     var ContentView = require('views/ContentView');
-    // var Transform = require('famous/core/Transform');
-    // var StateModifier = require('famous/modifiers/StateModifier');
+    var Transform = require('famous/core/Transform');
+    var StateModifier = require('famous/modifiers/StateModifier');
+    var Easing = require('famous/transitions/Easing');
 
     // create the main context
     var mainContext = Engine.createContext();
@@ -16,13 +17,14 @@ define(function(require, exports, module) {
 
     var navSurface = new Surface({
         content: '<div><h3 class="riser">Nav Bar Surface</h3><p>Nav Surface!<br>I live inside a nav context.</p><p>You can add <b>HTML</b> content to me and style me with <b>CSS!</b></p></div>',
-        size: [undefined, 400],
+        size: [undefined, undefined],
         classes: ['navSurface'],
         properties: {
-            backgroundColor: 'rgb(44, 44, 44)',
+            backgroundColor: 'rgb(0, 0, 0)',
             textAlign: 'center',
             textTransform: 'uppercase',
             fontWeight: '100',
+            fontSize: '1em',
             color: 'rgb(87, 185, 236)',
             padding: '2em'
         }
